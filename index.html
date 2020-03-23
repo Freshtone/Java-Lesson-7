@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferdighet 7</title>
+</head>
+<body>
+    <h1>Ferdighet 7</h1>
+    <h5>Oppgave: Lag en slider for å velge bredde fra 1 til 1000 og en slider 
+        for å velge høyde fra 1 til 1000. Vis en div med valgt bredde og høyde - 
+        og legg inn tekst i diven som viser arealet (bredde*høyde) og omkretsen 
+        (2*bredde+2*høyde).</h2>
+
+
+
+    <div>
+        Width - <input id="width" type="range" min="1" max="1000" step="1" oninput="showWidth(this.value);">
+        <input type="text" id="widthInput" value="">
+    </div>
+    
+    <div>
+        Height - <input id="height" type="range" min="1" max="1000" step="1" oninput="showHeight(this.value);">
+        <input type="text" id="heightInput" value="">
+    </div>  
+
+    <div>Area: <span></span></div>
+
+    <script>
+        function showWidth(val) {
+            document.getElementById('widthInput').value=val; 
+  }
+
+        function showHeight(val) {
+            document.getElementById('heightInput').value=val; 
+  }
+
+
+    </script>
+</body>
+</html>
