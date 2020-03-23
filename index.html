@@ -15,27 +15,35 @@
 
 
     <div>
-        Width - <input id="width" type="range" min="1" max="1000" step="1" oninput="showWidth(this.value);">
+        Width - <input id="width" value="0" type="range" min="1" max="1000" step="1" oninput="showWidth(this.value);"><br>
         <input type="text" id="widthInput" value="">
     </div>
     
     <div>
-        Height - <input id="height" type="range" min="1" max="1000" step="1" oninput="showHeight(this.value);">
+        Height - <input id="height" value="0" type="range" min="1" max="1000" step="1" oninput="showHeight(this.value);"><br>
         <input type="text" id="heightInput" value="">
     </div>  
+    
+    <button id="calculateArea">Calculate Area</button>
+    Result: <input type="text" id="areaResult" value= "">
 
-    <div>Area: <span></span></div>
+    <div id="resultArea"></div>
+
 
     <script>
-        function showWidth(val) {
-            document.getElementById('widthInput').value=val; 
-  }
+        function showWidth(thisWidth) {
+            document.getElementById('widthInput').value=thisWidth; 
+    }
 
-        function showHeight(val) {
-            document.getElementById('heightInput').value=val; 
-  }
+        function showHeight(thisHeight) {
+            document.getElementById('heightInput').value=thisHeight; 
+    }
 
-
+  function multiplyBy() {
+        num1 = document.getElementById("width").value;
+        num2 = document.getElementById("height").value;
+        document.getElementById("areaResult").innerHTML = num1 * num2;
+    }
     </script>
 </body>
 </html>
